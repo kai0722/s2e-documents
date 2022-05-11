@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Magnetic Disturbance Torque - S2E documents</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../Overview.html">Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">General Information</li><li class="chapter-item expanded "><a href="../../General/CodingConvention.html"><strong aria-hidden="true">1.</strong> Coding Convention</a></li><li class="chapter-item expanded "><a href="../../General/DocumentFormat.html"><strong aria-hidden="true">2.</strong> Format of Documents</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Setup Environment</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../General/HowToCompileWithVisualStudio.html"><strong aria-hidden="true">3.1.</strong> How to compile with Visual Studio</a></li><li class="chapter-item expanded "><a href="../../General/HowToCompileWithUbuntuInDocker.html"><strong aria-hidden="true">3.2.</strong> How to compile with Ubuntu in Docker</a></li><li class="chapter-item expanded "><a href="../../General/HowToCompileWith_OSX.html"><strong aria-hidden="true">3.3.</strong> How to compile with OSX Environment</a></li><li class="chapter-item expanded "><a href="../../General/HowToDownloadNRLMSISE00library.html"><strong aria-hidden="true">3.4.</strong> How to download and make NRLMSISE00 Library</a></li><li class="chapter-item expanded "><a href="../../General/HowToDwnloadCSPCElibrary.html"><strong aria-hidden="true">3.5.</strong> How to download CSPICE Library</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Tutorials</li><li class="chapter-item expanded "><a href="../../Tutorials/GettingStarted.html"><strong aria-hidden="true">4.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="../../Tutorials/HowToMakeNewSimulationScenario.html"><strong aria-hidden="true">5.</strong> How To Make New Simulation Scenario</a></li><li class="chapter-item expanded "><a href="../../Tutorials/HowToAddComponents.html"><strong aria-hidden="true">6.</strong> How To Add Components</a></li><li class="chapter-item expanded "><a href="../../Tutorials/HowToMakeNewComponents.html"><strong aria-hidden="true">7.</strong> How To Make New Components</a></li><li class="chapter-item expanded "><a href="../../Tutorials/HowToUseMonteCarloSimulation.html"><strong aria-hidden="true">8.</strong> How To Use Monte Carlo Simulation</a></li><li class="chapter-item expanded "><a href="../../Tutorials/HowToAddControlAlgorithms.html"><strong aria-hidden="true">9.</strong> How To Add Control Algorithms</a></li><li class="chapter-item expanded "><a href="../../Tutorials/HowToIntegrateC2A.html"><strong aria-hidden="true">10.</strong> How To Integrate C2A</a></li><li class="chapter-item expanded "><a href="../../Tutorials/HowToPerformUartHilsTest.html"><strong aria-hidden="true">11.</strong> How To Perform UART HILS Test</a></li><li class="chapter-item expanded "><a href="../../Tutorials/HowToPerformI2cHilsTest.html"><strong aria-hidden="true">12.</strong> How To Perform I2C HILS Test</a></li><li class="chapter-item expanded "><a href="../../Tutorials/HowToSimulateMultipleSatellites.html"><strong aria-hidden="true">13.</strong> How to simulate multiple satellites</a></li><li class="chapter-item expanded affix "><li class="part-title">Specifications</li><li class="chapter-item expanded "><a href="../../Specifications/OverallStructure/OverallStructure.html"><strong aria-hidden="true">14.</strong> Overall Structure</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.</strong> Component</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">15.1.</strong> Abstract</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Specifications/Component/Abstract/Spec_ComponentBase.html"><strong aria-hidden="true">15.1.1.</strong> Component Base</a></li><li class="chapter-item expanded "><a href="../../Specifications/Component/Abstract/Spec_ObcCommunicationBase.html"><strong aria-hidden="true">15.1.2.</strong> OBC Communication Base</a></li><li class="chapter-item expanded "><a href="../../Specifications/Component/Abstract/Spec_SensorBase.html"><strong aria-hidden="true">15.1.3.</strong> Sensor Base</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.2.</strong> AOCS</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Specifications/Component/AOCS/Spec_STT.html"><strong aria-hidden="true">15.2.1.</strong> STT</a></li><li class="chapter-item expanded "><a href="../../Specifications/Component/AOCS/Spec_RWJitter.html"><strong aria-hidden="true">15.2.2.</strong> RW Jitter</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.3.</strong> CDH</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.4.</strong> Logic</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.5.</strong> Mission</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Specifications/Component/Mission/Spec_Telescope_en.html"><strong aria-hidden="true">15.5.1.</strong> Telescope</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.6.</strong> Power</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Specifications/Component/Power/Spec_PCU.html"><strong aria-hidden="true">15.6.1.</strong> PCU</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.7.</strong> Propulsion</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Specifications/Component/Propulsion/Spec_SimpleThruster.html"><strong aria-hidden="true">15.7.1.</strong> SimpleThruster</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.8.</strong> Thermal</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">16.</strong> Disturbance</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Specifications/Disturbance/Spec_GeoPotential.html"><strong aria-hidden="true">16.1.</strong> GeoPotential</a></li><li class="chapter-item expanded "><a href="../../Specifications/Disturbance/Spec_GGTorque.html"><strong aria-hidden="true">16.2.</strong> Gravity Gradient Torque</a></li><li class="chapter-item expanded "><a href="../../Specifications/Disturbance/Spec_MagDisturbance.html" class="active"><strong aria-hidden="true">16.3.</strong> Magnetic Disturbance Torque</a></li><li class="chapter-item expanded "><a href="../../Specifications/Disturbance/Spec_SurfaceForce.html"><strong aria-hidden="true">16.4.</strong> Surface force</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Specifications/Disturbance/Spec_SurfaceForce_AirDrag.html"><strong aria-hidden="true">16.4.1.</strong> Air Drag</a></li><li class="chapter-item expanded "><a href="../../Specifications/Disturbance/Spec_SurfaceForce_SolarRadiation.html"><strong aria-hidden="true">16.4.2.</strong> Solar Radiation Pressure</a></li></ol></li><li class="chapter-item expanded "><a href="../../Specifications/Disturbance/Spec_ThirdBodyGravity.html"><strong aria-hidden="true">16.5.</strong> Third Body Gravity</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">17.</strong> Dynamics</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">17.1.</strong> Attitute</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Specifications/Dynamics/Spec_AttitudeDynamics.html"><strong aria-hidden="true">17.1.1.</strong> Attitude Dynamics</a></li><li class="chapter-item expanded "><a href="../../Specifications/Dynamics/Spec_ControlledAttitude.html"><strong aria-hidden="true">17.1.2.</strong> Controlled Attitude</a></li></ol></li><li class="chapter-item expanded "><a href="../../Specifications/Dynamics/Spec_Orbit.html"><strong aria-hidden="true">17.2.</strong> Orbit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Specifications/Dynamics/Spec_KeplerOrbit.html"><strong aria-hidden="true">17.2.1.</strong> Kepler Orbit Propagation</a></li><li class="chapter-item expanded "><a href="../../Specifications/Dynamics/Spec_Sgp4.html"><strong aria-hidden="true">17.2.2.</strong> SGP4 Orbit Propagation</a></li><li class="chapter-item expanded "><a href="../../Specifications/Dynamics/Spec_Rk4Orbit.html"><strong aria-hidden="true">17.2.3.</strong> RK4 Orbit Propagation</a></li><li class="chapter-item expanded "><a href="../../Specifications/Dynamics/Spec_EnckeMethod.html"><strong aria-hidden="true">17.2.4.</strong> Orbit Propagation with Encke's Method</a></li><li class="chapter-item expanded "><a href="../../Specifications/Dynamics/Spec_RelativeOrbit.html"><strong aria-hidden="true">17.2.5.</strong> Relative Orbit</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">17.3.</strong> Thermal</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">18.</strong> Environment</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Specifications/Environment/Spec_SRPEnvironment.html"><strong aria-hidden="true">18.1.</strong> SRP Environment</a></li><li class="chapter-item expanded "><a href="../../Specifications/Environment/Spec_Atmosphere.html"><strong aria-hidden="true">18.2.</strong> Atmosphere</a></li><li class="chapter-item expanded "><a href="../../Specifications/Environment/Spec_MagEnvironment.html"><strong aria-hidden="true">18.3.</strong> Magnetic Environment</a></li><li class="chapter-item expanded "><a href="../../Specifications/Environment/Spec_HipparcosCatalogue_en.html"><strong aria-hidden="true">18.4.</strong> Hipparcos Catalogue</a></li><li class="chapter-item expanded "><a href="../../Specifications/Environment/Spec_GnssSatellites_en.html"><strong aria-hidden="true">18.5.</strong> GNSS Satellites</a></li><li class="chapter-item expanded "><a href="../../Specifications/Environment/Spec_CelestialRotation.html"><strong aria-hidden="true">18.6.</strong> Celestial Rotation</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">19.</strong> Interface</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Specifications/Interface/Spec_PowerPort.html"><strong aria-hidden="true">19.1.</strong> Power Port</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">20.</strong> Library</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">21.</strong> Simulation</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Specifications/Simulation/Spec_MonteCarloSimulation.html"><strong aria-hidden="true">21.1.</strong> Monte Carlo Simulation</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">S2E documents</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="specification-for-magnetic-disturbance-torque"><a class="header" href="#specification-for-magnetic-disturbance-torque">Specification for Magnetic Disturbance Torque</a></h1>
+<h2 id="1--overview"><a class="header" href="#1--overview">1.  Overview</a></h2>
+<ol>
+<li>
+<p>functions</p>
+<ul>
+<li>This class calculates the magnetic disturbance torque in the <code>Disturbances</code> class</li>
+<li>This function receives the geomagnetic vector in the body-fixed coordinate system, calculates the cross product with the residual magnetic moment, and returns the residual magnetic torque in the body coordinate system.</li>
+</ul>
+</li>
+<li>
+<p>related files</p>
+<ul>
+<li>MagDisturbance.cpp, MagDisturbance.h : Definitions and declarations of the class</li>
+<li>Init_Disturbance.cpp : Interface functions for the initialization</li>
+<li>Disturbance.ini : Initialization file</li>
+</ul>
+</li>
+<li>
+<p>how to use</p>
+<ul>
+<li>Set the parameters in <code>Disturbance.ini</code></li>
+<li>Create an instance by using the initialization function <code>InitMagDisturbance</code></li>
+<li>Execute disturbance torque by <code>CalcTorque</code> function</li>
+<li>Use <code>Get*</code> function to get attitude information.</li>
+</ul>
+</li>
+</ol>
+<h2 id="2-explanation-of-algorithm"><a class="header" href="#2-explanation-of-algorithm">2. Explanation of Algorithm</a></h2>
+<ol>
+<li>
+<p><code>CalcTorque</code> function</p>
+<ol>
+<li>
+<p>overview</p>
+<ul>
+<li>This function performs disturbance calculation and torque output simultaneously. The magnetic disturbance torque is added to the disturbance torque when this function is called. This process is performed in each loop of the posture calculation.</li>
+</ul>
+</li>
+<li>
+<p>algorithm<br />
+Magnetic disturbance torque is calculated by the following equations (1). </p>
+<pre><code class="language-math">   \boldsymbol{T}_{mag} = \boldsymbol{M} \times \boldsymbol{B}
+   \tag{1}
+</code></pre>
+<p>where \( \boldsymbol{M} \) is the residual magnetic moment in the body-fixed frame, \( \boldsymbol{B} \) is the magnetic field in the body-fixed frame.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><code>CalcRMM</code> function</p>
+<ol>
+<li>
+<p>overview<br />
+This function calculates the residual magnetic moment(RMM) of the spacecraft. Usually, the RMM is varied by the power state of the components installed in the spacecraft, but this function emulates the variation of the RMM by a random walk process.</p>
+</li>
+<li>
+<p>inputs and outputs</p>
+<ul>
+<li>inputs
+<ul>
+<li>(double) stddev_rw: standard deviation of the random walk </li>
+<li>(double) limit_rw: limit of the one-step of the random walk </li>
+<li>(double) stddev_wn: standard deviation of the white noise</li>
+</ul>
+</li>
+<li>outputs
+<ul>
+<li>(Vector&lt;3&gt;) RMM: the residual magnetic moment in the body-fixed frame</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>algorithm<br />
+The residual magnetic moment is calculated by the following equations (2). </p>
+<pre><code class="language-math">  \boldsymbol{M}(t_{k+1}) = \boldsymbol{M}_0 + \boldsymbol{r}(t_{k+1}) + \boldsymbol{w}_1(t_{k+1}) \\
+  \boldsymbol{r}(t_{k+1}) = \boldsymbol{r}(t_{k}) +\boldsymbol{w_2}(t_{k+1})
+  \tag{2}
+</code></pre>
+<p>where \( \boldsymbol{M}_0 \) is the average residual magnetic moment in the body-fixed frame, \( \boldsymbol{r} \) is the random walk of RMM, and \( \boldsymbol{w}_i \sim N([0,0,0],\Sigma_i) \) is the white noise.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="3-results-of-verifications"><a class="header" href="#3-results-of-verifications">3. Results of verifications</a></h2>
+<ol>
+<li>
+<p>verification of magnetic disturbance torque</p>
+<ol>
+<li>
+<p>overview</p>
+<ul>
+<li>Check that the magnetic disturbance torque equation is performed correctly.</li>
+</ul>
+</li>
+<li>
+<p>conditions for the verification</p>
+<ul>
+<li>PropStepSec: 0.001</li>
+<li>StepTimeSec: 0.1</li>
+<li>EndTimeSec: 300</li>
+<li>Inertia tensor: diag [0.17, 0.1, 0.25]</li>
+<li>Initial Quaternion_i2b: [0,0,0,1]</li>
+<li>Initial torque: [0,0,0]</li>
+<li>Initial angular velocity: [0,0,0]</li>
+<li>Disturbance torque: All Disable except magnetic disturbance torque.</li>
+</ul>
+</li>
+<li>
+<p>results</p>
+<ul>
+<li>
+<p>RMM = [0.1,0,0]Am2</p>
+<ul>
+<li>T = residual magnetic moment × magnetic field</li>
+<li>The Y component of the earth's magnetic field corresponds to the Z component of the disturbance torque, and the Z component of the earth's magnetic field corresponds to the -Y component of the disturbance torque
+<img src="./figs/test_rmm_magneticfield.png" alt="" />
+<img src="./figs/test_rmm_px.png" alt="" /></li>
+</ul>
+</li>
+<li>
+<p>RMM = [0.05,0.05,0.05]Am2
+The order becomes $10^6$, which is a proper value.
+<img src="./figs/test_rmm_pxyz.png" alt="" /></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>verification of RMM</p>
+<ol>
+<li>
+<p>overview</p>
+<ul>
+<li>Check that the RMM equation is performed correctly.</li>
+</ul>
+</li>
+<li>
+<p>conditions for the verification</p>
+<ul>
+<li>PropStepSec: 0.001</li>
+<li>StepTimeSec: 0.1</li>
+<li>EndTimeSec: 300</li>
+<li>Inertia tensor: diag [0.17, 0.1, 0.25]</li>
+<li>Initial Quaternion_i2b: [0,0,0,1]</li>
+<li>Initial torque: [0,0,0]</li>
+<li>Initial angular velocity: [0,0,0]</li>
+<li>Disturbance torque: All Disable</li>
+</ul>
+</li>
+<li>
+<p>results</p>
+<ul>
+<li>[stddev_rw, limit_rw, stddev_wn] =  [1E-5,0,0]</li>
+<li>RMM random walk value is much smaller than 1E-5, because random walk limit is 0. </li>
+</ul>
+<p><img src="./figs/test_rmm_randomwalk.png" alt="" /></p>
+<ul>
+<li>[stddev_rw, limit_rw, stddev_wn] =  [1E-5,1E-4,0]</li>
+</ul>
+<p><img src="./figs/test_rmm_randomwalk_2.png" alt="" /></p>
+<ul>
+<li>[stddev_rw, limit_rw, stddev_wn] =  [0,0,1E-5]</li>
+</ul>
+<p><img src="./figs/test_rmm_whitenoise.png" alt="" /></p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="4-references"><a class="header" href="#4-references">4. References</a></h2>
+<ol>
+<li>姿勢制御研究委員会, 人工衛星の力学と姿勢ハンドブック, 培風館, 2007. (written in Japanese)</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../Specifications/Disturbance/Spec_GGTorque.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../Specifications/Disturbance/Spec_SurfaceForce.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../Specifications/Disturbance/Spec_GGTorque.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../Specifications/Disturbance/Spec_SurfaceForce.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
